@@ -1,0 +1,128 @@
+{% extends 'SProvider/design1.html' %}
+{% block researchblock %}
+
+
+<link rel="icon" href="images/icon.png" type="image/x-icon" />
+
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+
+
+
+		<style>
+			body {background-color:#000000;}
+			.container-fluid {padding:50px;}
+			.container{background-color:white;padding:50px;   }
+			#title{font-family: 'Fredoka One', cursive;
+}
+			.text-uppercase{
+			font-family: 'Righteous', cursive;
+
+			}
+			.tweettext{
+
+    border: 2px solid yellowgreen;
+    width: 1104px;
+    height: 442px;
+    overflow: scroll;
+    background-color:;
+}
+		.style1 {
+	color: #FF0000;
+	font-weight: bold;
+}
+        </style>
+
+	<body>
+	<div class="container-fluid">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-md-5">
+ 					<form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+							<p align="center" class="text-uppercase pull-center style1">Prediction of Financial Credit Scoring Type  !!! </p>
+                            <hr>
+                            <div class="tweettext">
+                               <table border="5" align="center" bordercolor="#FF00FF">
+                               <tr>
+
+                                  <td bgcolor="#FFFF00"><div align="center" class="style1"><span class="style8 style6">Customer_Id</span></div></td>
+ <td bgcolor="#FFFF00"><div align="center" class="style1"><span class="style8 style6">Name</span></div></td>
+ <td bgcolor="#FFFF00"><div align="center" class="style1"><span class="style8 style6">Age</span></div></td>
+ <td bgcolor="#FFFF00"><div align="center" class="style1"><span class="style8 style6">Occupation</span></div></td>
+ <td bgcolor="#FFFF00"><div align="center" class="style1"><span class="style8 style6">Annual_Income</span></div></td>
+ <td bgcolor="#FFFF00"><div align="center" class="style1"><span class="style8 style6">Monthly_Inhand_Salary</span></div></td>
+ <td bgcolor="#FFFF00"><div align="center" class="style1"><span class="style8 style6">Num_Bank_Accounts</span></div></td>
+ <td bgcolor="#FFFF00"><div align="center" class="style1"><span class="style8 style6">Num_Credit_Card</span></div></td>
+ <td bgcolor="#FFFF00"><div align="center" class="style1"><span class="style8 style6">Interest_Rate</span></div></td>
+ <td bgcolor="#FFFF00"><div align="center" class="style1"><span class="style8 style6">Num_of_Loan</span></div></td>
+ <td bgcolor="#FFFF00"><div align="center" class="style1"><span class="style8 style6">Type_of_Loan</span></div></td>
+ <td bgcolor="#FFFF00"><div align="center" class="style1"><span class="style8 style6">Delay_from_due_date</span></div></td>
+ <td bgcolor="#FFFF00"><div align="center" class="style1"><span class="style8 style6">Num_of_Delayed_Payment</span></div></td>
+ <td bgcolor="#FFFF00"><div align="center" class="style1"><span class="style8 style6">Changed_Credit_Limit</span></div></td>
+ <td bgcolor="#FFFF00"><div align="center" class="style1"><span class="style8 style6">Num_Credit_Inquiries</span></div></td>
+ <td bgcolor="#FFFF00"><div align="center" class="style1"><span class="style8 style6">Credit_Mix</span></div></td>
+ <td bgcolor="#FFFF00"><div align="center" class="style1"><span class="style8 style6">Outstanding_Debt</span></div></td>
+ <td bgcolor="#FFFF00"><div align="center" class="style1"><span class="style8 style6">Credit_Utilization_Ratio</span></div></td>
+ <td bgcolor="#FFFF00"><div align="center" class="style1"><span class="style8 style6">Credit_History_Age</span></div></td>
+ <td bgcolor="#FFFF00"><div align="center" class="style1"><span class="style8 style6">Payment_of_Min_Amount</span></div></td>
+ <td bgcolor="#FFFF00"><div align="center" class="style1"><span class="style8 style6">Total_EMI_per_month</span></div></td>
+ <td bgcolor="#FFFF00"><div align="center" class="style1"><span class="style8 style6">Amount_invested_monthly</span></div></td>
+ <td bgcolor="#FFFF00"><div align="center" class="style1"><span class="style8 style6">Payment_Behaviour</span></div></td>
+ <td bgcolor="#FFFF00"><div align="center" class="style1"><span class="style8 style6">Monthly_Balance</span></div></td>
+                                   <td bgcolor="#FFFF00"><div align="center" class="style1"><span class="style8 style6">Prediction</span></div></td>
+                      </tr>
+                            {% for object in list_objects %}
+                      <tr>
+
+                     <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.Customer_Id}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.Name}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.Age}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.Occupation}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.Annual_Income}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.Monthly_Inhand_Salary}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.Num_Bank_Accounts}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.Num_Credit_Card}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.Interest_Rate}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.Num_of_Loan}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.Type_of_Loan}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.Delay_from_due_date}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.Num_of_Delayed_Payment}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.Changed_Credit_Limit}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.Num_Credit_Inquiries}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.Credit_Mix}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.Outstanding_Debt}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.Credit_Utilization_Ratio}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.Credit_History_Age}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.Payment_of_Min_Amount}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.Total_EMI_per_month}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.Amount_invested_monthly}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.Payment_Behaviour}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.Monthly_Balance}}</td>
+                          <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.Prediction}}</td>
+
+                        </tr>
+
+                                        {% endfor %}
+                      </table>
+
+                            </div>
+
+
+
+
+						</fieldset>
+					</form>
+				</div>
+
+				<div class="col-md-2">
+					<!-------null------>
+				</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+    <tr>

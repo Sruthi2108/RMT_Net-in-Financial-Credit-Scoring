@@ -1,0 +1,185 @@
+{% extends 'RUser/design.html' %}
+{% block userblock %}
+
+
+<link rel="icon" href="images/icon.png" type="image/x-icon" />
+
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+
+
+
+		<style>
+			body {background-color:#000000;}
+			.container-fluid {padding:50px;}
+			.container{background-color:white;padding:50px;   }
+			#title{font-family: 'Fredoka One', cursive;
+}
+			.text-uppercase{
+			font-family: 'Righteous', cursive;
+
+			}
+			.tweettext{
+
+    border: 2px solid yellowgreen;
+    width: 904px;
+    height: 202px;
+    overflow: scroll;
+    background-color:;
+}
+		.style1 {
+	color: #FF0000;
+	font-weight: bold;
+}
+.style4 {color: #FFFF00; font-weight: bold; }
+.style6 {
+	font-size: 24px;
+	color: #FFFF00;
+	font-weight: bold;
+}
+        .style7 {font-size: 24px; color: #FFFF00; font-weight: bold; font-family: Georgia, "Times New Roman", Times, serif; }
+        </style>
+
+	<body>
+	<div class="container-fluid">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-md-5">
+
+                   <form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+							<p class="text-uppercase pull-center style1">Prediction Of Financial Credit Scoring Type !!! </p>
+                            <hr>
+
+                                {% csrf_token %}
+                                <table width="902" align="center">
+                                  <tr>
+                                    <td height="44" colspan="4" bgcolor="#FF0000"><div align="center" class="style7">Enter  Data Set Details  Here !!! </div></td>
+                                  </tr>
+                                  <tr>
+                                    <td width="237" height="44" bgcolor="#FF0000"><div align="center" class="style4">Enter Customer_Id</div></td>
+                                    <td width="176"><input type="text" name="Customer_Id"></td>
+                                    <td width="281" bgcolor="#FF0000"><span class="style4">Enter Name </span></td>
+                                    <td width="188"><input type="text" name="Name"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style4">Enter Age </div></td>
+                                    <td><input type="text" name="Age"></td>
+                                    <td bgcolor="#FF0000"><span class="style4">Enter Occupation</span></td>
+                                    <td><input type="text" name="Occupation"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style4">
+                                      <div align="center">Enter Annual_Income</div>
+                                    </div></td>
+                                    <td><input type="text" name="Annual_Income"></td>
+                                    <td bgcolor="#FF0000"><span class="style4">Enter Monthly_Inhand_Salary</span></td>
+                                    <td><input name="Monthly_Inhand_Salary" type="text" value=""></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style4">
+                                      <div align="center">Enter Num_Bank_Accounts</div>
+                                    </div></td>
+                                    <td><input type="text" name="Num_Bank_Accounts"></td>
+                                    <td bgcolor="#FF0000"><span class="style4">Enter Num_Credit_Card	</span></td>
+                                    <td><input type="text" name="Num_Credit_Card"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style4">Enter Interest_Rate</div></td>
+                                    <td><input type="text" name="Interest_Rate"></td>
+                                    <td bgcolor="#FF0000"><span class="style4">Enter Num_of_Loan</span></td>
+                                    <td><input type="text" name="Num_of_Loan"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style4"><span class="style2">Enter Type_of_Loan </span></div></td>
+                                    <td><input type="text" name="Type_of_Loan"></td>
+                                    <td bgcolor="#FF0000"><span class="style4">Enter Delay_from_due_date</span></td>
+                                    <td><input type="text" name="Delay_from_due_date"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style4">Enter Num_of_Delayed_Payment</div></td>
+                                    <td><input type="text" name="Num_of_Delayed_Payment"></td>
+                                    <td bgcolor="#FF0000"><span class="style4">Enter Changed_Credit_Limit</span></td>
+                                    <td><input type="text" name="Changed_Credit_Limit"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style4">Enter Num_Credit_Inquiries</div></td>
+                                    <td><input type="text" name="Num_Credit_Inquiries"></td>
+                                    <td bgcolor="#FF0000"><span class="style4">Enter Credit_Mix</span></td>
+                                    <td><input type="text" name="Credit_Mix"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style4">Enter Outstanding_Debt</div></td>
+                                    <td><input type="text" name="Outstanding_Debt"></td>
+                                    <td bgcolor="#FF0000"><span class="style4">Enter Credit_Utilization_Ratio</span></td>
+                                    <td><input type="text" name="Credit_Utilization_Ratio"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style4">Enter Credit_History_Age</div></td>
+                                    <td><input type="text" name="Credit_History_Age"></td>
+                                    <td bgcolor="#FF0000"><span class="style4">Enter Payment_of_Min_Amount</span></td>
+                                    <td><input type="text" name="Payment_of_Min_Amount"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style4">Enter Total_EMI_per_month</div></td>
+                                    <td><input type="text" name="Total_EMI_per_month"></td>
+                                    <td bgcolor="#FF0000"><span class="style4">Enter Amount_invested_monthly	</span></td>
+                                    <td><input type="text" name="Amount_invested_monthly"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style4">Enter Payment_Behaviour</div></td>
+                                    <td><input type="text" name="Payment_Behaviour"></td>
+                                    <td bgcolor="#FF0000"><span class="style4">Enter Monthly_Balance</span></td>
+                                    <td><input type="text" name="Monthly_Balance"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FFFFFF">&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td><input name="submit" type="submit" class="style1" value="Predict"></td>
+                                    <td>&nbsp;</td>
+                                  </tr>
+  <td><p>&nbsp; </p>
+          <p>&nbsp;</p></td>
+  </tr>
+                                </table>
+					 </fieldset>
+				  </form>
+
+
+ 					<form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+
+                            <hr>
+                            <div>
+                              <table width="842" border="0" align="center" >
+                                    <tr><td width="608" height="51" bgcolor="#FF0000"><div align="center"><span class="style6">View Prediction Financial Credit Scoring Type </span><strong> :: </strong></div></td>
+
+
+
+                                      <td width="224" bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center"><strong>{{objs}}</strong></div></td>
+                                    </tr>
+                      </table>
+
+
+
+                            </div>
+
+
+
+
+						</fieldset>
+					</form>
+				</div>
+
+				<div class="col-md-2">
+					<!-------null------>
+				</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+    <tr>
